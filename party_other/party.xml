@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!-- This file is part of ASPerPGI for Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<tryton>
+    <data>
+        <!-- <record model="ir.action.act_window" id="act_other_tagged_form">
+            <field name="name">Others</field>
+            <field name="res_model">party.party</field>
+            <field name="search_value" eval="[('customer', '=', False),('supplier', '=', False),('manufacturer', '=', False)]" pyson="1"/>
+        </record>
+
+        <menuitem parent="party.menu_party" sequence="4"
+                  action="act_other_tagged_form"
+                  icon="tryton-list"
+                  id="menu_other_tagged_form"/> -->
+
+        <record model="ir.action.act_window.domain" id="act_customers_tagged_form_domain">
+            <field name="name">Customers</field>
+            <field name="sequence" eval="1"/>
+            <field name="domain" eval="[('customer', '=', True)]" pyson="1"/>
+            <field name="count" eval="True"/>
+            <field name="act_window" ref="party.act_party_form"/>
+        </record>
+        <record model="ir.action.act_window.domain" id="act_supplier_tagged_form_domain">
+            <field name="name">Suppliers</field>
+            <field name="sequence" eval="2"/>
+            <field name="domain" eval="[('supplier', '=', True)]" pyson="1"/>
+            <field name="count" eval="True"/>
+            <field name="act_window" ref="party.act_party_form"/>
+        </record>
+        <record model="ir.action.act_window.domain" id="act_manufacturers_tagged_form_domain">
+            <field name="name">Manufacturers</field>
+            <field name="sequence" eval="3"/>
+            <field name="domain" eval="[('manufacturer', '=', True)]" pyson="1"/>
+            <field name="count" eval="True"/>
+            <field name="act_window" ref="party.act_party_form"/>
+        </record>
+        <record model="ir.action.act_window.domain" id="act_others_form_domain">
+            <field name="name">Others</field>
+            <field name="sequence" eval="3"/>
+            <field name="domain" eval="[('customer', '=', False),('supplier', '=', False),('manufacturer', '=', False)]" pyson="1"/>
+            <field name="count" eval="True"/>
+            <field name="act_window" ref="party.act_party_form"/>
+        </record>
+        <record model="ir.action.act_window.domain" id="act_all_form_domain">
+            <field name="name">All</field>
+            <field name="sequence" eval="5"/>
+            <field name="domain"/>
+            <field name="count" eval="True"/>
+            <field name="act_window" ref="party.act_party_form"/>
+        </record>
+
+    </data>
+</tryton>
