@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!-- This file is part of ASPerPGI for Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<tryton>
+    <data>
+        <record model="ir.ui.view" id="party_view_form">
+            <field name="model">party.party</field>
+            <field name="inherit" ref="party.party_view_form"/>
+            <field name="name">party_form</field>
+        </record>
+
+        <!-- <record model="ir.action.act_window" id="act_manufacturer_tagged_form">
+            <field name="name">Manufacturers</field>
+            <field name="res_model">party.party</field>
+            <field name="search_value" eval="[('manufacturer', '=', 1)]" pyson="1"/>
+        </record> -->
+
+        <!-- <menuitem parent="party.menu_party" sequence="3"
+                  action="act_manufacturer_tagged_form"
+                  icon="tryton-list"
+                  id="menu_manufacturer_tagged_form"/> -->
+
+        <menuitem sequence="20" action="party.act_address_form" id="party.menu_address_form"/>
+        <menuitem sequence="30" action="party.act_contact_mechanism_form" id="party.menu_contact_mechanism_form"/>
+    </data>
+</tryton>
