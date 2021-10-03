@@ -1,10 +1,11 @@
 # This file is part of ASPerPGI for Tryton.  The COPYRIGHT file at the top level of
 # this repository contains the full copyright notices and license terms.
+import logging
 from trytond.i18n import gettext
 from trytond.model import fields
-from trytond.pool import PoolMeta
-from trytond.wizard import Wizard, StateAction, StateView, StateTransition, \
-    Button
+from trytond.pool import Pool,PoolMeta
+from trytond.wizard import Wizard, StateAction
+from trytond.pyson import PYSONEncoder
 
 class Party(metaclass=PoolMeta):
     __name__ = 'party.party'
@@ -12,25 +13,23 @@ class Party(metaclass=PoolMeta):
     customer = fields.Boolean('Customer',
         help="Check this box if the party is a customer.")
 
-class OpenSupplier(Wizard):
-    'Open Suppliers'
-    __name__ = 'purchase.open_supplier'
+class OpenCustomers(Wizard):
+    'Open Customers'
+    __name__ = 'party_customer.open_customers'
     start_state = 'open_'
-    open_ = StateAction('party.act_party_form')
+    open_ = StateAction('party_customer.act_party_form')
 
     def do_open_(self, action):
         pool = Pool()
-        ModelData = pool.get('ir.model.data')
-        Wizard = pool.get('ir.action.wizard')
-        Purchase = pool.get('purchase.purchase')
-        cursor = Transaction().connection.cursor()
-        purchase = Purchase.__table__()
-
-        cursor.execute(*purchase.select(purchase.party,
-                group_by=purchase.party))
-        supplier_ids = [line[0] for line in cursor.fetchall()]
+        Party = pool.get('party.party')
+        parties = Party.search(['customer','=',True])
+        action['res_id'] = []
+        for party in parties:
+            action['res_id'].append(party.id)
         action['pyson_domain'] = PYSONEncoder().encode(
-            [('id', 'in', supplier_ids)])
-        wizard = Wizard(ModelData.get_id('purchase', 'act_open_supplier'))
-        action['name'] = wizard.name
+            [('id', 'in', action['res_id'])])
+        logging.getLogger(__name__).info(action)
         return action, {}
+
+    def transition_open_(self):
+        return 'end'

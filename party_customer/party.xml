@@ -3,31 +3,42 @@
 this repository contains the full copyright notices and license terms. -->
 <tryton>
     <data>
+        <!--Adds data customer on standard views-->
+        <record model="ir.ui.view" id="party_view_tree">
+            <field name="model">party.party</field>
+            <field name="inherit" ref="party.party_view_tree"/>
+            <field name="name">party_tree</field>
+        </record>
         <record model="ir.ui.view" id="party_view_form">
             <field name="model">party.party</field>
             <field name="inherit" ref="party.party_view_form"/>
             <field name="name">party_form</field>
         </record>
-
-        <record model="ir.action.act_window" id="act_open_customer">
+        <!--New action window in order to have good title-->
+        <record model="ir.action.act_window" id="act_party_form">
             <field name="name">Customers</field>
             <field name="res_model">party.party</field>
-            <field name="search_value" eval="[('customer', '=', True)]" pyson="1"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_party_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="party.party_view_tree"/>
+            <field name="act_window" ref="act_party_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_party_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="party.party_view_form"/>
+            <field name="act_window" ref="act_party_form"/>
+        </record>
+        <!--Menu definition-->
+        <record model="ir.action.wizard" id="act_open_customers">
+            <field name="name">Customers</field>
+            <field name="wiz_name">party_customer.open_customers</field>
         </record>
         <menuitem name="Customers"
                   parent="party.menu_party_form"
-                  action="act_open_customer"
+                  action="act_open_customers"
                   icon="tryton-list"
-                  id="menu_supplier"/>
+                  id="menu_customers"/>
 
-        <record model="ir.action.wizard" id="act_open_supplier">
-            <field name="name">Parties associated to Purchases</field>
-            <field name="wiz_name">purchase.open_supplier</field>
-        </record>
-        <menuitem name="Parties associated to Purchases"
-            parent="party.menu_party_form"
-            action="act_open_supplier"
-            icon="tryton-list"
-            id="menu_supplier"/>
     </data>
 </tryton>
