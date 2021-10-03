@@ -28,7 +28,6 @@ class OpenCustomers(Wizard):
             action['res_id'].append(party.id)
         action['pyson_domain'] = PYSONEncoder().encode(
             [('id', 'in', action['res_id'])])
-        logging.getLogger(__name__).info(action)
         return action, {}
 
     def transition_open_(self):
