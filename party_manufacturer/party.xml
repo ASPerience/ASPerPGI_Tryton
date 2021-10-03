@@ -3,24 +3,41 @@
 this repository contains the full copyright notices and license terms. -->
 <tryton>
     <data>
+        <!--Adds data manufacturer on standard views-->
+        <record model="ir.ui.view" id="party_view_tree">
+            <field name="model">party.party</field>
+            <field name="inherit" ref="party.party_view_tree"/>
+            <field name="name">party_tree</field>
+        </record>
         <record model="ir.ui.view" id="party_view_form">
             <field name="model">party.party</field>
             <field name="inherit" ref="party.party_view_form"/>
             <field name="name">party_form</field>
         </record>
-
-        <!-- <record model="ir.action.act_window" id="act_manufacturer_tagged_form">
+        <!--New action window in order to have good title-->
+        <record model="ir.action.act_window" id="act_party_form">
             <field name="name">Manufacturers</field>
             <field name="res_model">party.party</field>
-            <field name="search_value" eval="[('manufacturer', '=', 1)]" pyson="1"/>
-        </record> -->
-
-        <!-- <menuitem parent="party.menu_party" sequence="3"
-                  action="act_manufacturer_tagged_form"
+        </record>
+        <record model="ir.action.act_window.view" id="act_party_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="party.party_view_tree"/>
+            <field name="act_window" ref="act_party_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_party_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="party.party_view_form"/>
+            <field name="act_window" ref="act_party_form"/>
+        </record>
+        <!--Menu definition-->
+        <record model="ir.action.wizard" id="act_open_manufacturers">
+            <field name="name">Manufacturers</field>
+            <field name="wiz_name">party_manufacturer.open_manufacturers</field>
+        </record>
+        <menuitem name="Manufacturers"
+                  parent="party.menu_party_form"
+                  action="act_open_manufacturers"
                   icon="tryton-list"
-                  id="menu_manufacturer_tagged_form"/> -->
-
-        <menuitem sequence="20" action="party.act_address_form" id="party.menu_address_form"/>
-        <menuitem sequence="30" action="party.act_contact_mechanism_form" id="party.menu_contact_mechanism_form"/>
+                  id="menu_manufacturers"/>
     </data>
 </tryton>

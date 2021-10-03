@@ -8,3 +8,6 @@ def register():
     Pool.register(
         party.Party,
         module='party_manufacturer', type_='model')
+    Pool.register(
+        party.OpenManufacturers,
+        module='party_manufacturer', type_='wizard')
