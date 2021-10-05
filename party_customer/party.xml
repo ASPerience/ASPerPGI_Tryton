@@ -29,16 +29,27 @@ this repository contains the full copyright notices and license terms. -->
             <field name="view" ref="party.party_view_form"/>
             <field name="act_window" ref="act_party_form"/>
         </record>
-        <!--Menu definition-->
+        <!--Menu definition fixed list by ids-->
         <record model="ir.action.wizard" id="act_open_customers">
-            <field name="name">Customers</field>
+            <field name="name">Customers listing</field>
             <field name="wiz_name">party_customer.open_customers</field>
         </record>
-        <menuitem name="Customers"
-                  parent="party.menu_party_form"
+        <menuitem parent="party.menu_party_form"
                   action="act_open_customers"
                   icon="tryton-list"
                   id="menu_customers"/>
+
+        <!--Menu definition-->
+        <record model="ir.action.act_window" id="act_open_customers_tagged">
+            <field name="name">Customers</field>
+            <field name="res_model">party.party</field>
+            <field name="search_value" eval="[('customer', '=', True)]" pyson="1"/>
+        </record>
+        <menuitem parent="party.menu_party" sequence="2"
+                  action="act_open_customers_tagged"
+                  icon="tryton-list"
+                  id="menu_customers_tagged"/>
+
 
     </data>
 </tryton>

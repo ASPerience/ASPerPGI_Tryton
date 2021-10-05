@@ -7,6 +7,18 @@ msgid "Customers"
 msgstr "Clients"
 
 msgctxt "model:ir.ui.menu,name:menu_customers"
+msgid "Customers listing"
+msgstr "Listing clients"
+
+msgctxt "model:ir.action,name:act_open_customers"
+msgid "Customers listing"
+msgstr "Listing clients"
+
+msgctxt "model:ir.ui.menu,name:menu_customers_tagged"
+msgid "Customers"
+msgstr "Clients"
+
+msgctxt "model:ir.action,name:act_open_customers_tagged"
 msgid "Customers"
 msgstr "Clients"
 
