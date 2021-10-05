@@ -7,6 +7,18 @@ msgid "Manufacturers"
 msgstr "Fabricants"
 
 msgctxt "model:ir.ui.menu,name:menu_manufacturers"
+msgid "Manufacturers listing"
+msgstr "Listing fabricants"
+
+msgctxt "model:ir.action,name:act_open_manufacturers"
+msgid "Manufacturers listing"
+msgstr "Listing fabricants"
+
+msgctxt "model:ir.ui.menu,name:menu_manufacturers_tagged"
+msgid "Manufacturers"
+msgstr "Fabricants"
+
+msgctxt "model:ir.action,name:act_open_manufacturers_tagged"
 msgid "Manufacturers"
 msgstr "Fabricants"
 

@@ -6,6 +6,7 @@ from trytond.model import fields
 from trytond.pool import Pool,PoolMeta
 from trytond.wizard import Wizard, StateAction
 from trytond.pyson import PYSONEncoder
+
 class Party(metaclass=PoolMeta):
     __name__ = 'party.party'
 

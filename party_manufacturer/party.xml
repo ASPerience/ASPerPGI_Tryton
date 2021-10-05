@@ -29,15 +29,26 @@ this repository contains the full copyright notices and license terms. -->
             <field name="view" ref="party.party_view_form"/>
             <field name="act_window" ref="act_party_form"/>
         </record>
-        <!--Menu definition-->
+        <!--Menu definition fixed list by ids-->
         <record model="ir.action.wizard" id="act_open_manufacturers">
-            <field name="name">Manufacturers</field>
+            <field name="name">Manufacturers listing</field>
             <field name="wiz_name">party_manufacturer.open_manufacturers</field>
         </record>
-        <menuitem name="Manufacturers"
-                  parent="party.menu_party_form"
+        <menuitem parent="party.menu_party_form"
                   action="act_open_manufacturers"
                   icon="tryton-list"
                   id="menu_manufacturers"/>
+
+        <!--Menu definition-->
+        <record model="ir.action.act_window" id="act_open_manufacturers_tagged">
+            <field name="name">Manufacturers</field>
+            <field name="res_model">party.party</field>
+            <field name="search_value" eval="[('manufacturer', '=', True)]" pyson="1"/>
+        </record>
+        <menuitem parent="party.menu_party" sequence="2"
+                  action="act_open_manufacturers_tagged"
+                  icon="tryton-list"
+                  id="menu_manufacturers_tagged"/>
+
     </data>
 </tryton>
