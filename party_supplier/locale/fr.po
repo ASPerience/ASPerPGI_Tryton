@@ -1,0 +1,31 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "model:ir.action,name:act_party_form"
+msgid "Suppliers"
+msgstr "Fournisseurs"
+
+msgctxt "model:ir.ui.menu,name:menu_suppliers"
+msgid "Suppliers listing"
+msgstr "Listing fournisseurs"
+
+msgctxt "model:ir.action,name:act_open_suppliers"
+msgid "Suppliers listing"
+msgstr "Listing fournisseurs"
+
+msgctxt "model:ir.ui.menu,name:menu_suppliers_tagged"
+msgid "Suppliers"
+msgstr "Fournisseurs"
+
+msgctxt "model:ir.action,name:act_open_suppliers_tagged"
+msgid "Suppliers"
+msgstr "Fournisseurs"
+
+msgctxt "field:party.party,supplier:"
+msgid "Supplier"
+msgstr "Fournisseur"
+
+msgctxt "help:party.party,supplier:"
+msgid "Check this box if the party is a supplier."
+msgstr "Cochez la case si le tiers est un fournisseur."
