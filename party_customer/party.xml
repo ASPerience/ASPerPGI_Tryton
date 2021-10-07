@@ -31,7 +31,7 @@ this repository contains the full copyright notices and license terms. -->
         </record>
         <!--Menu definition fixed list by ids-->
         <record model="ir.action.wizard" id="act_open_customers">
-            <field name="name">Customers listing</field>
+            <field name="name">Customers</field>
             <field name="wiz_name">party_customer.open_customers</field>
         </record>
         <menuitem parent="party.menu_party_form"
@@ -41,9 +41,10 @@ this repository contains the full copyright notices and license terms. -->
 
         <!--Menu definition-->
         <record model="ir.action.act_window" id="act_open_customers_tagged">
-            <field name="name">Customers</field>
+            <field name="name">Customers search</field>
             <field name="res_model">party.party</field>
             <field name="search_value" eval="[('customer', '=', True)]" pyson="1"/>
+            <field name="order" eval="[('write_date', 'DESC')]" pyson="1"/>
         </record>
         <menuitem parent="party.menu_party" sequence="2"
                   action="act_open_customers_tagged"

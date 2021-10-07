@@ -7,20 +7,20 @@ msgid "Manufacturers"
 msgstr "Fabricants"
 
 msgctxt "model:ir.ui.menu,name:menu_manufacturers"
-msgid "Manufacturers listing"
-msgstr "Listing fabricants"
+msgid "Manufacturers"
+msgstr "Fabricants"
 
 msgctxt "model:ir.action,name:act_open_manufacturers"
-msgid "Manufacturers listing"
-msgstr "Listing fabricants"
+msgid "Manufacturers"
+msgstr "Fabricants"
 
 msgctxt "model:ir.ui.menu,name:menu_manufacturers_tagged"
-msgid "Manufacturers"
-msgstr "Fabricants"
+msgid "Manufacturers search"
+msgstr "Recherche fabricants"
 
 msgctxt "model:ir.action,name:act_open_manufacturers_tagged"
-msgid "Manufacturers"
-msgstr "Fabricants"
+msgid "Manufacturers search"
+msgstr "Recherche fabricants"
 
 msgctxt "field:party.party,manufacturer:"
 msgid "Manufacturer"

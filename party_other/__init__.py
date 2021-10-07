@@ -2,7 +2,10 @@
 # this repository contains the full copyright notices and license terms.
 
 from trytond.pool import Pool
+from . import party
 
 def register():
     Pool.register(
-        module='party_other', type_='model')
+        party.OpenOthers,
+        module='party_other', type_='wizard')
+        

@@ -3,33 +3,23 @@
 this repository contains the full copyright notices and license terms. -->
 <tryton>
     <data>
-        <!-- <record model="ir.action.act_window" id="act_other_tagged_form">
-            <field name="name">Others</field>
-            <field name="res_model">party.party</field>
-            <field name="search_value" eval="[('customer', '=', False),('supplier', '=', False),('manufacturer', '=', False)]" pyson="1"/>
-        </record>
-
-        <menuitem parent="party.menu_party" sequence="4"
-                  action="act_other_tagged_form"
-                  icon="tryton-list"
-                  id="menu_other_tagged_form"/> -->
-
+        <!--Tabs on party form-->
         <record model="ir.action.act_window.domain" id="act_customers_tagged_form_domain">
-            <field name="name">Customers</field>
+            <field name="name">Customer</field>
             <field name="sequence" eval="1"/>
             <field name="domain" eval="[('customer', '=', True)]" pyson="1"/>
             <field name="count" eval="True"/>
             <field name="act_window" ref="party.act_party_form"/>
         </record>
-        <record model="ir.action.act_window.domain" id="act_supplier_tagged_form_domain">
-            <field name="name">Suppliers</field>
+        <record model="ir.action.act_window.domain" id="act_suppliers_tagged_form_domain">
+            <field name="name">Supplier only</field>
             <field name="sequence" eval="2"/>
             <field name="domain" eval="[('supplier', '=', True)]" pyson="1"/>
             <field name="count" eval="True"/>
             <field name="act_window" ref="party.act_party_form"/>
         </record>
         <record model="ir.action.act_window.domain" id="act_manufacturers_tagged_form_domain">
-            <field name="name">Manufacturers</field>
+            <field name="name">Manufacturer only</field>
             <field name="sequence" eval="3"/>
             <field name="domain" eval="[('manufacturer', '=', True)]" pyson="1"/>
             <field name="count" eval="True"/>
@@ -37,7 +27,7 @@ this repository contains the full copyright notices and license terms. -->
         </record>
         <record model="ir.action.act_window.domain" id="act_others_form_domain">
             <field name="name">Others</field>
-            <field name="sequence" eval="3"/>
+            <field name="sequence" eval="4"/>
             <field name="domain" eval="[('customer', '=', False),('supplier', '=', False),('manufacturer', '=', False)]" pyson="1"/>
             <field name="count" eval="True"/>
             <field name="act_window" ref="party.act_party_form"/>
@@ -50,5 +40,42 @@ this repository contains the full copyright notices and license terms. -->
             <field name="act_window" ref="party.act_party_form"/>
         </record>
 
+        <!--New action window in order to have good title-->
+        <record model="ir.action.act_window" id="act_party_form">
+            <field name="name">Others</field>
+            <field name="res_model">party.party</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_party_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="party.party_view_tree"/>
+            <field name="act_window" ref="act_party_form"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_party_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="party.party_view_form"/>
+            <field name="act_window" ref="act_party_form"/>
+        </record>
+
+        <!--Menu 1 definition fixed list by ids-->
+        <record model="ir.action.wizard" id="act_open_others">
+            <field name="name">Others</field>
+            <field name="wiz_name">party_other.open_others</field>
+        </record>
+        <menuitem parent="party.menu_party_form"
+                  action="act_open_others"
+                  icon="tryton-list"
+                  id="menu_others"/>
+
+        <!--Menu 2 definition-->
+        <record model="ir.action.act_window" id="act_open_others_tagged">
+            <field name="name">Others search</field>
+            <field name="res_model">party.party</field>
+            <field name="search_value" eval="[('customer', '=', False),('supplier', '=', False),('manufacturer', '=', False)]" pyson="1"/>
+            <field name="order" eval="[('write_date', 'DESC')]" pyson="1"/>
+        </record>
+        <menuitem parent="party.menu_party" sequence="4"
+                  action="act_open_others_tagged"
+                  icon="tryton-list"
+                  id="menu_others_tagged"/>
     </data>
 </tryton>

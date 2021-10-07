@@ -29,9 +29,9 @@ this repository contains the full copyright notices and license terms. -->
             <field name="view" ref="party.party_view_form"/>
             <field name="act_window" ref="act_party_form"/>
         </record>
-        <!--Menu definition fixed list by ids-->
+        <!--Menu 1 definition fixed list by ids-->
         <record model="ir.action.wizard" id="act_open_suppliers">
-            <field name="name">Suppliers listing</field>
+            <field name="name">Suppliers</field>
             <field name="wiz_name">party_supplier.open_suppliers</field>
         </record>
         <menuitem parent="party.menu_party_form"
@@ -39,11 +39,12 @@ this repository contains the full copyright notices and license terms. -->
                   icon="tryton-list"
                   id="menu_suppliers"/>
 
-        <!--Menu definition-->
+        <!--Menu 2 definition-->
         <record model="ir.action.act_window" id="act_open_suppliers_tagged">
-            <field name="name">Suppliers</field>
+            <field name="name">Suppliers search</field>
             <field name="res_model">party.party</field>
             <field name="search_value" eval="[('supplier', '=', True)]" pyson="1"/>
+            <field name="order" eval="[('write_date', 'DESC')]" pyson="1"/>
         </record>
         <menuitem parent="party.menu_party" sequence="2"
                   action="act_open_suppliers_tagged"

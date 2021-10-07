@@ -7,20 +7,20 @@ msgid "Suppliers"
 msgstr "Fournisseurs"
 
 msgctxt "model:ir.ui.menu,name:menu_suppliers"
-msgid "Suppliers listing"
-msgstr "Listing fournisseurs"
+msgid "Suppliers"
+msgstr "Fournisseurs"
 
 msgctxt "model:ir.action,name:act_open_suppliers"
-msgid "Suppliers listing"
-msgstr "Listing fournisseurs"
+msgid "Suppliers"
+msgstr "Fournisseurs"
 
 msgctxt "model:ir.ui.menu,name:menu_suppliers_tagged"
-msgid "Suppliers"
-msgstr "Fournisseurs"
+msgid "Suppliers search"
+msgstr "Recherche fournisseurs"
 
 msgctxt "model:ir.action,name:act_open_suppliers_tagged"
-msgid "Suppliers"
-msgstr "Fournisseurs"
+msgid "Suppliers search"
+msgstr "Recherche fournisseurs"
 
 msgctxt "field:party.party,supplier:"
 msgid "Supplier"
