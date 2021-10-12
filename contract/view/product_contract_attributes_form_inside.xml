@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!-- This file is part of ASPerPGI for Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<form>
+    <label name="name"/>
+    <field name="name"/>
+    <label name="product"/>
+    <field name="product"/>
+    <label name="comment"/>
+    <newline/>
+    <field name="comment" colspan="4"/>
+    <newline/>
+    <label name="calculate"/>
+    <field name="calculate"/>
+    <label name="uos"/>
+    <field name="uos"/>
+    <label name="applicable_type"/>
+    <field name="applicable_type"/>
+    <newline/>
+    <field name="list_price"/>
+    <field name="cost_price"/>
+    <newline/>
+    <label name="python_compute"/>
+    <newline/>
+    <field name="python_compute" colspan="4"/>
+</form>

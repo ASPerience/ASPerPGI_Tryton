@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!-- This file is part of ASPerPGI for Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<form>
+    <label name="code"/>
+    <field name="code"/>
+    <label name="name"/>
+    <field name="name"/>
+    <label name="duration_months"/>
+    <field name="duration_months"/>
+    <field name="contract_attributes" 
+        colspan="4" view_ids="contract.product_contract_attributes_tree_view,contract.product_contract_attributes_form_view"/>
+</form>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!-- This file is part of ASPerPGI for Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<!-- <tree string="Contracts" colors="red:virtual_available&lt;0;blue:state in ['draft', 'end', 'obsolete']"> -->
+<tree>
+    <field name="name"/>
+    <field name="product"/>
+    <field name="calculate"/>
+    <field name="applicable_type"/>
+    <field name="uos"/>
+    <field name="list_price"/>
+    <field name="cost_price"/>
+</tree>

@@ -1,9 +1,14 @@
 Contract Module
 ########################
 
-The Contract module defines the following models: 
+The Contract module redefines the following models: 
+ * New boolean field "contract" on product template
  * 
- *
+
+The Contract module defines the following models: 
+ * Product contract
+ * Product contract attributes
+
 
 Attribute
 *********
