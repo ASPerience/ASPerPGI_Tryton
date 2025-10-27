@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<!-- This file is part of ASPerPGI for Tryton.  The COPYRIGHT file at the top level of
-this repository contains the full copyright notices and license terms. -->
-<data>
-    <xpath expr="//group[@id='checkboxes']/label[@name='consumable']" position="before">
-        <label name="contract"/>
-        <field name="contract" xexpand="0" width="25"/>
-    </xpath>
-</data>
