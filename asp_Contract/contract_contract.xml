@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<!-- This file is part of ASPerPGI for Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<tryton>
+    <data>
+        <!--Manager-->
+        <record model="res.group" id="group_contract_contract_admin">
+            <field name="name">Contracts Manager</field>
+        </record>
+        <record model="res.user-res.group" id="user_admin_group_contract_contract_admin">
+            <field name="user" ref="res.user_admin"/>
+            <field name="group" ref="group_contract_contract_admin"/>
+        </record>
+
+        <!--Base view-->
+    		<record model="ir.ui.view" id="contract_contract_form_view">
+    			<field name="model">contract.contract</field>
+    			<field name="type">form</field>
+    			<field name="name">contract_contract_form</field>
+            </record>
+    		<record model="ir.ui.view" id="contract_contract_tree_view">
+    			<field name="model">contract.contract</field>
+    			<field name="type">tree</field>
+    			<field name="name">contract_contract_tree</field>
+    		</record>
+
+    		<record model="ir.action.act_window" id="contract_contract_action">
+    			<field name="name">Contracts</field>
+    			<field name="res_model">contract.contract</field>
+    		</record>
+        <record model="ir.action.act_window.view" id="contract_contract_action_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="contract_contract_tree_view"/>
+            <field name="act_window" ref="contract_contract_action"/>
+        </record>
+        <record model="ir.action.act_window.view" id="contract_contract_action_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="contract_contract_form_view"/>
+            <field name="act_window" ref="contract_contract_action"/>
+        </record>
+
+    		<menuitem parent="sale.menu_sale"
+    			action="contract_contract_action"
+    			id="menu_contract_contract"
+    			sequence="30"
+  			/>
+        <!--Manager rights-->
+        <record model="ir.ui.menu-res.group"
+            id="menu_contract_contract_group_contract_contract_admin">
+            <field name="menu" ref="menu_contract_contract"/>
+            <field name="group" ref="group_contract_contract_admin"/>
+        </record>
+
+        <!--Child views-->
+        <record model="ir.ui.view" id="contract_contract_attributes_form_view">
+            <field name="model">contract.contract.attribute</field>
+            <field name="type">form</field>
+            <field name="priority" eval="20"/>
+            <field name="name">contract_contract_attributes_form_inside</field>
+        </record>
+        <record model="ir.ui.view" id="contract_contract_attributes_tree_view">
+            <field name="model">contract.contract.attribute</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="20"/>
+            <field name="name">contract_contract_attributes_tree_inside</field>
+        </record>
+
+        <record model="ir.ui.view" id="contract_contract_invoice_form_view">
+            <field name="model">contract.contract.invoice</field>
+            <field name="type">form</field>
+            <field name="priority" eval="20"/>
+            <field name="name">contract_contract_invoice_form_inside</field>
+        </record>
+        <record model="ir.ui.view" id="contract_contract_invoice_tree_view">
+            <field name="model">contract.contract.invoice</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="20"/>
+            <field name="name">contract_contract_invoice_tree_inside</field>
+        </record>
+
+        <record model="ir.ui.view" id="contract_invoice_detail_form_view">
+            <field name="model">contract.contract.invoice.detail</field>
+            <field name="type">form</field>
+            <field name="priority" eval="20"/>
+            <field name="name">contract_contract_invoice_detail_form_inside</field>
+        </record>
+        <record model="ir.ui.view" id="contract_invoice_detail_tree_view">
+            <field name="model">contract.contract.invoice.detail</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="20"/>
+            <field name="name">contract_contract_invoice_detail_tree_inside</field>
+        </record>
+
+        <!--Buttons-->
+        <record model="ir.model.button" id="contract_contract_closure_button">
+          <field name="name">closure_check</field>
+          <field name="string">Vérifier la date de cloture</field>
+          <field name="model">contract.contract</field>
+        </record>
+        <record model="ir.model.button" id="contract_contract_cancel_closure_button">
+          <field name="name">cancel_closure</field>
+          <field name="string">Supprimer la date de cloture</field>
+          <field name="model">contract.contract</field>
+        </record>
+        <record model="ir.model.button" id="contract_contract_recalculate_button">
+          <field name="name">recalculate</field>
+          <field name="string">Recalculer</field>
+          <field name="model">contract.contract</field>
+        </record>
+        <record model="ir.model.button" id="contract_contract_invoice_button">
+          <field name="name">create_invoice</field>
+          <field name="string">Générer la facture</field>
+          <field name="model">contract.contract.invoice</field>
+        </record>
+
+        <record model="ir.model.button" id="contract_contract_generated_button">
+          <field name="name">generated</field>
+          <field name="string">Créer</field>
+          <field name="model">contract.contract</field>
+        </record>
+        <record model="ir.model.button" id="contract_contract_quote_button">
+          <field name="name">quote</field>
+          <field name="string">Devis</field>
+          <field name="model">contract.contract</field>
+        </record>
+        <record model="ir.model.button" id="contract_contract_started_button">
+          <field name="name">started</field>
+          <field name="string">Démarrer</field>
+          <field name="model">contract.contract</field>
+        </record>
+        <record model="ir.model.button" id="contract_contract_stopped_button">
+          <field name="name">stopped</field>
+          <field name="string">Arrêter</field>
+          <field name="model">contract.contract</field>
+        </record>
+        <record model="ir.model.button" id="contract_contract_draft_button">
+          <field name="name">draft</field>
+          <field name="string">Brouillon</field>
+          <field name="model">contract.contract</field>
+        </record>
+        <record model="ir.model.button" id="contract_contract_canceled_button">
+          <field name="name">canceled</field>
+          <field name="string">Annuler</field>
+          <field name="model">contract.contract</field>
+        </record>
+    </data>
+</tryton>

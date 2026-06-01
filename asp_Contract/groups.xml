@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+        <record model="res.group" id="group_productcontract">
+            <field name="name">Administrator products contracts</field>
+        </record>
+        <record model="ir.ui.menu-res.group"
+            id="menu_party_group_group_productcontract">
+            <field name="menu" ref="party.menu_party"/>
+            <field name="group" ref="group_productcontract"/>
+        </record>
+        <record model="ir.model.access" id="access_party_party_backdhl">
+            <field name="model">party.party</field>
+            <field name="group" ref="group_productcontract"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_party_address_backdhl">
+            <field name="model">party.address</field>
+            <field name="group" ref="group_productcontract"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_party_address_format_backdhl">
+            <field name="model">party.address.format</field>
+            <field name="group" ref="group_productcontract"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_party_category_backdhl">
+            <field name="model">party.category</field>
+            <field name="group" ref="group_productcontract"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.model.access" id="access_party_contact_mechanism_backdhl">
+            <field name="model">party.contact_mechanism</field>
+            <field name="group" ref="group_productcontract"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+    </data>
+</tryton>

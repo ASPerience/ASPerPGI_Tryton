@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!-- This file is part of ASPerPGI for Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<form>
+  <label name="reference"/>
+  <field name="reference"/>
+  <label name="partner"/>
+  <field name="partner"/>
+  <label name="contact_address"/>
+  <field name="contact_address"/>
+  <label name="invoice_address"/>
+  <field name="invoice_address"/>
+  <label name="email"/>
+  <field name="email"/>
+  <newline/>
+  <label name="contract"/>
+  <field name="contract"/>
+  <label name="forecast_duration_months"/>
+  <field name="forecast_duration_months"/>
+  <newline/>
+  <label name="initial_duration_months"/>
+  <field name="initial_duration_months"/>
+  <label name="renewal_duration_months"/>
+  <field name="renewal_duration_months"/>
+  <label name="begin_date"/>
+  <field name="begin_date"/>
+  <label name="end_date"/>
+  <field name="end_date"/>
+  <label name="initial_price_indicator"/>
+  <field name="initial_price_indicator"/>
+  <label name="actual_price_indicator"/>
+  <field name="actual_price_indicator"/>
+  <label name="delay_notice_months"/>
+  <field name="delay_notice_months"/>
+  <label name="billing_time_in_months"/>
+  <field name="billing_time_in_months"/>
+  <label name="payment_term"/>
+  <field name="payment_term"/>
+  <label name="billing_in_period_start"/>
+  <field name="billing_in_period_start"/>
+  <newline/>
+  <label name="closure_date"/>
+  <field name="closure_date"/>
+  <button name="closure_check"/>
+  <button name="cancel_closure" icon="tryton-cancel"/>
+  <field name="contract_attributes"
+      colspan="4" view_ids="asp_Contract.contract_contract_attributes_tree_view,asp_Contract.contract_contract_attributes_form_view"/>
+  <field name="contract_invoice"
+      colspan="4" view_ids="asp_Contract.contract_contract_invoice_tree_view,asp_Contract.contract_contract_invoice_form_view"/>
+  <group col="-1" colspan="6" id="footer">
+    <group col="-1" colspan="3" id="buttons">
+      <button name="recalculate"/>
+      <button name="draft"/>
+      <button name="generated" icon="tryton-ok"/>
+      <button name="quote" icon="tryton-ok"/>
+      <button name="started" icon="tryton-ok"/>
+      <button name="stopped" icon="tryton-cancel"/>
+      <button name="canceled" icon="tryton-cancel"/>
+    </group>
+    <label name="state"/>
+    <field name="state"/>
+  </group>
+</form>

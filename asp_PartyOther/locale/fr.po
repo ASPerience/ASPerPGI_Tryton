@@ -1,0 +1,48 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "model:ir.action,name:act_party_form"
+msgid "Others"
+msgstr "Autres"
+
+msgctxt "model:ir.ui.menu,name:menu_others"
+msgid "Others"
+msgstr "Autres"
+
+msgctxt "model:ir.action,name:act_open_others"
+msgid "Others"
+msgstr "Autres"
+
+msgctxt "model:ir.ui.menu,name:menu_others_tagged"
+msgid "Others search"
+msgstr "Recherche autres"
+
+msgctxt "model:ir.action,name:act_open_others_tagged"
+msgid "Others search"
+msgstr "Recherche autres"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_customers_tagged_form_domain"
+msgid "Customer"
+msgstr "Client"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_suppliers_tagged_form_domain"
+msgid "Supplier"
+msgstr "Fournisseur"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_manufacturers_tagged_form_domain"
+msgid "Manufacturer"
+msgstr "Fabricant"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_others_form_domain"
+msgid "Others"
+msgstr "Autres"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_all_form_domain"
+msgid "All"
+msgstr "Tous"

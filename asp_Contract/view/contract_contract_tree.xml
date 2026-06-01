@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!-- This file is part of ASPerPGI for Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<tree>
+    <field name="reference"/>
+    <field name="partner"/>
+    <field name="begin_date"/>
+    <field name="end_date"/>
+    <field name="closure_date"/>
+    <field name="delay_notice_months"/>
+    <field name="state"/>
+</tree>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!-- This file is part of ASPerPGI for Tryton.  The COPYRIGHT file at the top level of
+this repository contains the full copyright notices and license terms. -->
+<form>
+    <label name="number"/>
+    <field name="number"/>
+    <label name="period"/>
+    <field name="period"/>
+    <label name="month"/>
+    <field name="month"/>
+    <field name="detail"
+        colspan="4" view_ids="asp_Contract.contract_invoice_detail_tree_view,asp_Contract.contract_invoice_detail_form_view"/>
+</form>
