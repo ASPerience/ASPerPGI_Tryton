@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+        <record model="ir.ui.view" id="view_secret_usage_log_tree">
+            <field name="model">secret.usage.log</field>
+            <field name="type">tree</field>
+            <field name="name">secret_usage_log_tree</field>
+        </record>
+
+        <record model="ir.ui.view" id="view_secret_usage_log_form">
+            <field name="model">secret.usage.log</field>
+            <field name="type">form</field>
+            <field name="name">secret_usage_log_form</field>
+        </record>
+
+        <record model="ir.action.act_window" id="act_secret_usage_log">
+            <field name="name">Journal d'usage</field>
+            <field name="res_model">secret.usage.log</field>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_secret_usage_log_view_tree">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="view_secret_usage_log_tree"/>
+            <field name="act_window" ref="act_secret_usage_log"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_secret_usage_log_view_form">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="view_secret_usage_log_form"/>
+            <field name="act_window" ref="act_secret_usage_log"/>
+        </record>
+
+        <menuitem
+            name="Journal d'usage"
+            parent="menu_secret_root"
+            action="act_secret_usage_log"
+            id="menu_secret_usage_log"
+            icon="tryton-list"
+            sequence="15"/>
+
+        <record model="ir.action-res.group" id="act_secret_usage_log_group">
+            <field name="action" ref="act_secret_usage_log"/>
+            <field name="group" ref="group_secret_manager_admin"/>
+        </record>
+
+        <record model="ir.ui.menu-res.group" id="menu_secret_usage_log_group">
+            <field name="menu" ref="menu_secret_usage_log"/>
+            <field name="group" ref="group_secret_manager_admin"/>
+        </record>
+
+        <record model="ir.model.access" id="access_secret_usage_log_deny">
+            <field name="model">secret.usage.log</field>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+
+        <record model="ir.model.access" id="access_secret_usage_log_admin">
+            <field name="model">secret.usage.log</field>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+            <field name="group" ref="group_secret_manager_admin"/>
+        </record>
+    </data>
+</tryton>

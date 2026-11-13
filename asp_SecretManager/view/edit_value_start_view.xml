@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+
+
+<form>
+    <field name="use_custom_key" invisible="1"/>
+    <label string="Ce secret utilise une clé personnelle." id="custom_key_notice" colspan="4" states='{"invisible": {"__class__": "Not", "v": {"__class__": "Bool", "v": {"__class__": "Eval", "v": "use_custom_key", "d": ""}}}}'/>
+    <group id="secret_key" colspan="4">
+        <label name="decryption_key"/>
+        <field name="decryption_key" widget="password"/>
+    </group>
+    <group id="secret_value" colspan="4">
+        <label name="new_value"/>
+        <field name="new_value" widget="password"/>
+    </group>
+</form>
+

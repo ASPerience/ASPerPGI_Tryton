@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<tryton>
+    <data>
+        <!-- Groups -->
+        <record model="res.group" id="group_secret_manager">
+            <field name="name">Gestionnaire de secrets</field>
+        </record>
+        <record model="res.group" id="group_secret_manager_admin">
+            <field name="name">Administration des secrets</field>
+            <field name="parent" ref="group_secret_manager"/>
+        </record>
+
+        <!-- User Admin Assignments -->
+        <record model="res.user-res.group" id="user_admin_group_secret_manager">
+            <field name="user" ref="res.user_admin"/>
+            <field name="group" ref="group_secret_manager"/>
+        </record>
+        <record model="res.user-res.group" id="user_admin_group_secret_manager_admin">
+            <field name="user" ref="res.user_admin"/>
+            <field name="group" ref="group_secret_manager_admin"/>
+        </record>
+
+        <!-- Secrets Main Menu -->
+        <menuitem
+            name="Secrets"
+            parent="ir.menu_administration"
+            id="menu_secret_root"/>
+    </data>
+</tryton>

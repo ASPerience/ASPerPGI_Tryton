@@ -1,0 +1,399 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:secret.edit.start,decryption_key:"
+msgid "Clé de déchiffrement"
+msgstr "Entschlüsselungsschlüssel"
+
+msgctxt "help:secret.edit.start,decryption_key:"
+msgid "Optionnel"
+msgstr "Optional"
+
+msgctxt "field:secret.edit.start,new_value:"
+msgid "Nouvelle valeur"
+msgstr "Neuer Wert"
+
+msgctxt "field:secret.edit.start,use_custom_key:"
+msgid "Utiliser une clé personnelle ?"
+msgstr "Einen persönlichen Schlüssel verwenden?"
+
+msgctxt "field:secret.generate.start,key:"
+msgid "Clé générée"
+msgstr "Generierter Schlüssel"
+
+msgctxt "field:secret.rotate.result,already_current_count:"
+msgid "Déjà à jour"
+msgstr "Bereits aktuell"
+
+msgctxt "field:secret.rotate.result,custom_key_count:"
+msgid "Ignorés (clé personnelle)"
+msgstr "Übersprungen (persönlicher Schlüssel)"
+
+msgctxt "field:secret.rotate.result,failed_count:"
+msgid "En échec"
+msgstr "Fehlgeschlagen"
+
+msgctxt "field:secret.rotate.result,failed_names:"
+msgid "Secrets en échec"
+msgstr "Fehlgeschlagene Geheimnisse"
+
+msgctxt "field:secret.rotate.result,rotated_count:"
+msgid "Secrets rechiffrés"
+msgstr "Neu verschlüsselte Geheimnisse"
+
+msgctxt "field:secret.rotate.start,encrypted_field_count:"
+msgid "Champs métier concernés"
+msgstr "Betroffene Fachfelder"
+
+msgctxt "field:secret.rotate.start,custom_key_count:"
+msgid "Secrets à clé personnelle (ignorés)"
+msgstr "Geheimnisse mit persönlichem Schlüssel (übersprungen)"
+
+msgctxt "field:secret.rotate.start,old_key_configured:"
+msgid "Ancienne clé configurée"
+msgstr "Vorheriger Schlüssel konfiguriert"
+
+msgctxt "field:secret.rotate.start,secret_count:"
+msgid "Secrets concernés"
+msgstr "Betroffene Geheimnisse"
+
+msgctxt "field:secret.secret,custom_key:"
+msgid "Clé personnelle"
+msgstr "Persönlicher Schlüssel"
+
+msgctxt "help:secret.secret,custom_key:"
+msgid "Clé Fernet générée via Administration → Secrets → Générer une clé. Obligatoire si « Utiliser une clé personnelle ? » est coché."
+msgstr "Fernet-Schlüssel, erzeugt über Administration → Geheimnisse → Schlüssel generieren. Erforderlich, wenn „Einen persönlichen Schlüssel verwenden?“ aktiviert ist."
+
+msgctxt "field:secret.show.result,decrypted_value:"
+msgid "Valeur déchiffrée"
+msgstr "Entschlüsselter Wert"
+
+msgctxt "field:secret.show.ask,decryption_key:"
+msgid "Clé de déchiffrement"
+msgstr "Entschlüsselungsschlüssel"
+
+msgctxt "help:secret.show.ask,decryption_key:"
+msgid "Optionnel"
+msgstr "Optional"
+
+msgctxt "field:secret.show.ask,use_custom_key:"
+msgid "Utiliser une clé personnelle ?"
+msgstr "Einen persönlichen Schlüssel verwenden?"
+
+msgctxt "field:secret.secret,decryption_key:"
+msgid "Clé de déchiffrement"
+msgstr "Entschlüsselungsschlüssel"
+
+msgctxt "help:secret.secret,decryption_key:"
+msgid "Optionnel"
+msgstr "Optional"
+
+msgctxt "field:secret.secret,name:"
+msgid "Clé"
+msgstr "Schlüssel"
+
+msgctxt "field:secret.secret,new_value:"
+msgid "Nouvelle valeur"
+msgstr "Neuer Wert"
+
+msgctxt "field:secret.secret,use_custom_key:"
+msgid "Utiliser une clé personnelle ?"
+msgstr "Einen persönlichen Schlüssel verwenden?"
+
+msgctxt "help:secret.secret,use_custom_key:"
+msgid "Cochez pour chiffrer ce secret avec une clé Fernet personnelle (générée via Administration → Secrets → Générer une clé) au lieu de la clé de l'instance."
+msgstr "Aktivieren, um dieses Geheimnis mit einem persönlichen Fernet-Schlüssel (erzeugt über Administration → Geheimnisse → Schlüssel generieren) statt mit dem Instanzschlüssel zu verschlüsseln."
+
+msgctxt "field:secret.secret,value:"
+msgid "Valeur"
+msgstr "Wert"
+
+msgctxt "help:secret.secret,value:"
+msgid "Saisir la valeur en clair : elle est chiffrée à l'enregistrement."
+msgstr "Klartext eingeben: beim Speichern wird verschlüsselt."
+
+msgctxt "model:ir.action,name:act_edit_value"
+msgid "Modifier la valeur"
+msgstr "Wert bearbeiten"
+
+msgctxt "model:ir.action,name:act_generate_key"
+msgid "Générer une clé"
+msgstr "Schlüssel generieren"
+
+msgctxt "model:ir.action,name:act_rotate_key"
+msgid "Rechiffrer les secrets"
+msgstr "Geheimnisse neu verschlüsseln"
+
+msgctxt "model:ir.action,name:act_secret"
+msgid "Secrets"
+msgstr "Geheimnisse"
+
+msgctxt "model:ir.message,text:msg_decrypt_failed_wrong_key"
+msgid "Impossible de déchiffrer : mauvaise clé"
+msgstr "Entschlüsselung nicht möglich: falscher Schlüssel"
+
+msgctxt "model:ir.message,text:msg_decrypt_failed_null_secret"
+msgid "Impossible de déchiffrer : le secret est nul"
+msgstr "Entschlüsselung nicht möglich: das Geheimnis ist null"
+
+msgctxt "model:ir.message,text:msg_key_source_not_configured"
+msgid "Aucune clé de chiffrement configurée (section [asp_secret_manager] de trytond.conf)"
+msgstr "Kein Verschlüsselungsschlüssel konfiguriert (Abschnitt [asp_secret_manager] in trytond.conf)"
+
+msgctxt "model:ir.message,text:msg_key_file_unreadable"
+msgid "Impossible de lire le fichier de clé."
+msgstr "Schlüsseldatei kann nicht gelesen werden."
+
+msgctxt "model:ir.message,text:msg_key_file_permissions"
+msgid "Droits du fichier de clé trop permissifs (%(mode)s) : 0600 ou 0400 attendu"
+msgstr "Berechtigungen der Schlüsseldatei zu offen (%(mode)s): 0600 oder 0400 erwartet"
+
+msgctxt "model:ir.message,text:msg_duplicate_secret_name"
+msgid "Un secret avec ce nom existe déjà, essayer de changer le nom du nouveau secret"
+msgstr "Ein Geheimnis mit diesem Namen existiert bereits, bitte den Namen des neuen Geheimnisses ändern."
+
+msgctxt "model:ir.message,text:msg_encryption_key_required"
+msgid "La clé personnelle de chiffrement est requise pour ce secret"
+msgstr "Der persönliche Verschlüsselungsschlüssel ist für dieses Geheimnis erforderlich"
+
+msgctxt "model:ir.message,text:msg_invalid_fernet_key_format"
+msgid "Clé de chiffrement invalide (format Fernet requis)"
+msgstr "Ungültiger Verschlüsselungsschlüssel (Fernet-Format erforderlich)"
+
+msgctxt "model:ir.message,text:msg_key_required"
+msgid "Une clé de chiffrement Fernet est requise pour cette opération"
+msgstr "Ein Fernet-Verschlüsselungsschlüssel ist für diesen Vorgang erforderlich"
+
+msgctxt "model:ir.message,text:msg_new_value_required"
+msgid "La nouvelle valeur est requise"
+msgstr "Der neue Wert ist erforderlich"
+
+msgctxt "model:ir.message,text:msg_personal_key_required"
+msgid "La clé personnelle est requise"
+msgstr "Der persönliche Schlüssel ist erforderlich"
+
+msgctxt "model:ir.message,text:msg_secret_edit_name_required"
+msgid "Le nom du secret à modifier est requis"
+msgstr "Der zu ändernde Geheimnisname ist erforderlich"
+
+msgctxt "model:ir.message,text:msg_secret_not_found"
+msgid "Aucun secret trouvé avec ce nom"
+msgstr "Kein Geheimnis mit diesem Namen gefunden"
+
+msgctxt "model:ir.message,text:msg_secret_name_required"
+msgid "Le nom du secret est requis"
+msgstr "Der Geheimnisname ist erforderlich"
+
+msgctxt "model:ir.message,text:msg_secret_value_required"
+msgid "La valeur du secret est requise"
+msgstr "Der Geheimniswert ist erforderlich"
+
+msgctxt "model:ir.action,name:act_show_value"
+msgid "Afficher la valeur"
+msgstr "Wert anzeigen"
+
+msgctxt "model:ir.model.button,string:secret_show_value_button"
+msgid "Afficher"
+msgstr "Anzeigen"
+
+msgctxt "model:ir.model.button,string:secret_start_edit_button"
+msgid "Modifier"
+msgstr "Bearbeiten"
+
+msgctxt "model:ir.ui.menu,name:menu_generate_key"
+msgid "Générer une clé"
+msgstr "Schlüssel generieren"
+
+msgctxt "model:ir.ui.menu,name:menu_rotate_key"
+msgid "Rechiffrer les secrets"
+msgstr "Geheimnisse neu verschlüsseln"
+
+msgctxt "model:ir.ui.menu,name:menu_secret_list"
+msgid "Secrets"
+msgstr "Geheimnisse"
+
+msgctxt "model:ir.ui.menu,name:menu_secret_root"
+msgid "Secrets"
+msgstr "Geheimnisse"
+
+msgctxt "model:secret.edit.start,string:"
+msgid "Modifier la valeur"
+msgstr "Wert bearbeiten"
+
+msgctxt "view:secret.edit.start:"
+msgid "Ce secret utilise une clé personnelle."
+msgstr "Dieses Secret verwendet einen persönlichen Schlüssel."
+
+msgctxt "model:secret.generate.start,string:"
+msgid "Générer une clé"
+msgstr "Schlüssel generieren"
+
+msgctxt "model:secret.show.result,string:"
+msgid "Valeur du secret"
+msgstr "Geheimniswert"
+
+msgctxt "model:secret.show.ask,string:"
+msgid "Afficher la valeur"
+msgstr "Wert anzeigen"
+
+msgctxt "model:secret.rotate.result,string:"
+msgid "Rechiffrement terminé"
+msgstr "Neuverschlüsselung abgeschlossen"
+
+msgctxt "model:secret.rotate.start,string:"
+msgid "Rechiffrer les secrets"
+msgstr "Geheimnisse neu verschlüsseln"
+
+msgctxt "model:secret.secret,string:"
+msgid "Secret"
+msgstr "Geheimnis"
+
+msgctxt "model:res.group,name:group_secret_manager"
+msgid "Gestionnaire de secrets"
+msgstr "Geheimnis-Manager"
+
+msgctxt "model:res.group,name:group_secret_manager_admin"
+msgid "Administration des secrets"
+msgstr "Geheimnis-Administration"
+
+msgctxt "wizard_button:secret.edit,start,end:"
+msgid "Annuler"
+msgstr "Abbrechen"
+
+msgctxt "wizard_button:secret.edit,start,save:"
+msgid "Enregistrer"
+msgstr "Speichern"
+
+msgctxt "wizard_button:secret.generate,start,end:"
+msgid "Fermer"
+msgstr "Schließen"
+
+msgctxt "wizard_button:secret.show,result,end:"
+msgid "Fermer"
+msgstr "Schließen"
+
+msgctxt "wizard_button:secret.show,ask,end:"
+msgid "Annuler"
+msgstr "Abbrechen"
+
+msgctxt "wizard_button:secret.show,ask,show:"
+msgid "Afficher"
+msgstr "Anzeigen"
+
+msgctxt "wizard_button:secret.rotate,result,end:"
+msgid "Fermer"
+msgstr "Schließen"
+
+msgctxt "wizard_button:secret.rotate,start,end:"
+msgid "Annuler"
+msgstr "Abbrechen"
+
+msgctxt "wizard_button:secret.rotate,start,rotate:"
+msgid "Rechiffrer"
+msgstr "Neu verschlüsseln"
+
+msgctxt "field:secret.usage.log,action:"
+msgid "Action"
+msgstr "Aktion"
+
+msgctxt "field:secret.usage.log,channel:"
+msgid "Canal"
+msgstr "Kanal"
+
+msgctxt "field:secret.usage.log,date:"
+msgid "Date"
+msgstr "Datum"
+
+msgctxt "field:secret.usage.log,failure_reason:"
+msgid "Motif d'échec"
+msgstr "Fehlergrund"
+
+msgctxt "field:secret.usage.log,outcome:"
+msgid "Résultat"
+msgstr "Ergebnis"
+
+msgctxt "field:secret.usage.log,secret:"
+msgid "Secret"
+msgstr "Geheimnis"
+
+msgctxt "field:secret.usage.log,secret_name:"
+msgid "Nom du secret"
+msgstr "Name des Geheimnisses"
+
+msgctxt "field:secret.usage.log,use_custom_key:"
+msgid "Clé personnelle utilisée"
+msgstr "Persönlicher Schlüssel verwendet"
+
+msgctxt "field:secret.usage.log,user:"
+msgid "Utilisateur"
+msgstr "Benutzer"
+
+msgctxt "model:ir.action,name:act_secret_usage_log"
+msgid "Journal d'usage"
+msgstr "Nutzungsprotokoll"
+
+msgctxt "model:ir.ui.menu,name:menu_secret_usage_log"
+msgid "Journal d'usage"
+msgstr "Nutzungsprotokoll"
+
+msgctxt "model:secret.usage.log,string:"
+msgid "Journal d'usage"
+msgstr "Nutzungsprotokoll"
+
+msgctxt "selection:secret.usage.log,action:"
+msgid "Affichage"
+msgstr "Anzeige"
+
+msgctxt "selection:secret.usage.log,action:"
+msgid "Chiffrement"
+msgstr "Verschlüsselung"
+
+msgctxt "selection:secret.usage.log,action:"
+msgid "Déverrouillage"
+msgstr "Entsperren"
+
+msgctxt "selection:secret.usage.log,action:"
+msgid "Rechiffrement"
+msgstr "Neuverschlüsselung"
+
+msgctxt "selection:secret.usage.log,action:"
+msgid "Suppression"
+msgstr "Löschung"
+
+msgctxt "selection:secret.usage.log,action:"
+msgid "Rotation"
+msgstr "Rotation"
+
+msgctxt "selection:ir.cron,method:"
+msgid "Purge du journal d'usage des secrets"
+msgstr "Bereinigung des Geheimnis-Nutzungsprotokolls"
+
+msgctxt "selection:secret.usage.log,channel:"
+msgid "API"
+msgstr "API"
+
+msgctxt "selection:secret.usage.log,channel:"
+msgid "Interface"
+msgstr "Benutzeroberfläche"
+
+msgctxt "selection:secret.usage.log,failure_reason:"
+msgid "Clé absente"
+msgstr "Schlüssel fehlt"
+
+msgctxt "selection:secret.usage.log,failure_reason:"
+msgid "Déchiffrement impossible"
+msgstr "Entschlüsselung unmöglich"
+
+msgctxt "selection:secret.usage.log,failure_reason:"
+msgid "Format de clé invalide"
+msgstr "Ungültiges Schlüsselformat"
+
+msgctxt "selection:secret.usage.log,outcome:"
+msgid "Échec"
+msgstr "Fehler"
+
+msgctxt "selection:secret.usage.log,outcome:"
+msgid "Succès"
+msgstr "Erfolg"

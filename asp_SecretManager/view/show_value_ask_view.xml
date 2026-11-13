@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<form>
+    <field name="use_custom_key" invisible="1"/>
+    <label name="decryption_key"/>
+    <field name="decryption_key" widget="password"/>
+</form>

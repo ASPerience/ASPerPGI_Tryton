@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+
+<form>
+    <label name="decrypted_value"/>
+    <field name="decrypted_value"/>
+</form>

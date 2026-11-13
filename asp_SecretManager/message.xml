@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+        <record model="ir.message" id="msg_secret_name_required">
+            <field name="text">Le nom du secret est requis</field>
+        </record>
+        <record model="ir.message" id="msg_secret_value_required">
+            <field name="text">La valeur du secret est requise</field>
+        </record>
+        <record model="ir.message" id="msg_personal_key_required">
+            <field name="text">La clé personnelle est requise</field>
+        </record>
+        <record model="ir.message" id="msg_duplicate_secret_name">
+            <field name="text">Un secret avec ce nom existe déjà, essayer de changer le nom du nouveau secret</field>
+        </record>
+        <record model="ir.message" id="msg_key_required">
+            <field name="text">Une clé de chiffrement Fernet est requise pour cette opération</field>
+        </record>
+        <record model="ir.message" id="msg_encryption_key_required">
+            <field name="text">La clé personnelle de chiffrement est requise pour ce secret</field>
+        </record>
+        <record model="ir.message" id="msg_secret_edit_name_required">
+            <field name="text">Le nom du secret à modifier est requis</field>
+        </record>
+        <record model="ir.message" id="msg_secret_not_found">
+            <field name="text">Aucun secret trouvé avec ce nom</field>
+        </record>
+        <record model="ir.message" id="msg_new_value_required">
+            <field name="text">La nouvelle valeur est requise</field>
+        </record>
+        <record model="ir.message" id="msg_invalid_fernet_key_format">
+            <field name="text">Clé de chiffrement invalide (format Fernet requis)</field>
+        </record>
+        <record model="ir.message" id="msg_key_source_not_configured">
+            <field name="text">Aucune clé de chiffrement configurée (section [asp_secret_manager] de trytond.conf)</field>
+        </record>
+        <record model="ir.message" id="msg_key_file_unreadable">
+            <field name="text">Impossible de lire le fichier de clé.</field>
+        </record>
+        <record model="ir.message" id="msg_key_file_permissions">
+            <field name="text">Droits du fichier de clé trop permissifs (%(mode)s) : 0600 ou 0400 attendu</field>
+        </record>
+        <record model="ir.message" id="msg_decrypt_failed_wrong_key">
+            <field name="text">Impossible de déchiffrer : mauvaise clé</field>
+        </record>
+        <record model="ir.message" id="msg_decrypt_failed_null_secret">
+            <field name="text">Impossible de déchiffrer : le secret est nul</field>
+        </record>
+    </data>
+</tryton>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<form>
+    <group id="rotate_result" col="2">
+        <label name="rotated_count"/>
+        <field name="rotated_count"/>
+        <label name="already_current_count"/>
+        <field name="already_current_count"/>
+        <label name="custom_key_count"/>
+        <field name="custom_key_count"/>
+        <label name="failed_count"/>
+        <field name="failed_count"/>
+        <label name="failed_names"/>
+        <field name="failed_names" widget="text"/>
+    </group>
+</form>

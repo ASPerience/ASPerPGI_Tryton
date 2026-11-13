@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<form>
+    <group id="rotate_start" col="2">
+        <label name="secret_count"/>
+        <field name="secret_count"/>
+        <label name="encrypted_field_count"/>
+        <field name="encrypted_field_count"/>
+        <label name="custom_key_count"/>
+        <field name="custom_key_count"/>
+        <label name="old_key_configured"/>
+        <field name="old_key_configured"/>
+    </group>
+</form>
